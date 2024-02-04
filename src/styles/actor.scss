@@ -22,12 +22,13 @@
         gap:24px;
         grid-template-columns: repeat(4,1fr);
         list-style: none;
-        &__item{
+        &__item{ color:#fff;
             h4{
                 margin-top:20px;
                 margin-bottom: 24px;
+            
             }
-            li{
+            li{  padding: 5px;
                 list-style: none;
             }
            img{
