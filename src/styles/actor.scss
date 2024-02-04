@@ -1,0 +1,41 @@
+.actor{
+    padding: 5.6vw;
+    @media (max-width:768px){
+        grid-template-columns: 1fr 1fr;
+        h2{
+            margin-top: 90px;
+        }
+    
+            img{
+            text-align: center;;
+            max-width: 100px;
+            height:400px;
+          
+            }
+     }
+    h2{
+        text-align: center;
+        margin-bottom: 84px;
+    }
+    &__list{
+        display: grid;
+        gap:24px;
+        grid-template-columns: repeat(4,1fr);
+        list-style: none;
+        &__item{
+            h4{
+                margin-top:20px;
+                margin-bottom: 24px;
+            }
+            li{
+                list-style: none;
+            }
+           img{
+            text-align: center;;
+            max-width: 300px;
+            height:400px;
+            // width:10%;
+           }
+        }
+    }
+}

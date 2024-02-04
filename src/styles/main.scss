@@ -1,0 +1,111 @@
+
+@use 'variaveis';
+@use 'hero';
+@use 'shows';
+@use 'actor';
+@use 'faq';
+@use 'footer';
+@use 'header';
+
+@font-face{
+    font-family:lost;
+    src:url(../../assets/fonts/lost.leonenst-bold.otf);
+    font-weight: 400;
+}
+@font-face{
+    font-family:lost;
+    src:url(../../assets/fonts/lost.leonenst-bold.otf);
+    font-weight: 700;
+}
+
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    background-color:variaveis.$corDeFundo;
+    
+}
+@mixin text($fontSize:16px){
+    font-size:$fontSize;
+    line-height: $fontSize + 10px;
+    color:variaveis.$corTextoPrincipal;
+}
+@mixin title($fontSize:40px){
+    @include text($fontSize);
+    color:variaveis.$corTextoSecundario;
+}
+.text{
+    @include text(18px);
+}
+.text{
+    @include text;
+}
+.text--small{
+    @include text(12px);
+}
+.title{
+    @include title;
+}
+.title--small{
+    @include title(28px);
+}
+.link-text{
+    @include text(18px);
+    color:variaveis.$corTextoSecundario;
+    text-decoration: underline;
+}
+.image-text-section{
+  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    color: #fff;
+    @media(max-width:768px){
+        display: block;
+    }
+    img{
+        padding-top: 4vw;
+        max-width:100%;
+        height: 140%;
+        border-radius: 4px;
+    }
+    &__text_container{
+        padding:0 5vw;
+        h2{
+            font-size: 34px;
+            color:variaveis.$corTextoSecundario;
+            margin-bottom:10px;
+        }
+        p{
+            font-size: 25px;
+        }
+    }
+    &--image-full-width{
+        display: block;
+        position: relative;
+        img{
+            width:100%;
+        }
+        &__text_container{
+            position:absolute;
+            top:18.6vw;
+            left:35%;
+            height:100%;
+            right:10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            @media(max-width:768px){
+                position:relative;
+                left:0;
+                width:100%;
+            }
+        }
+    }
+}
